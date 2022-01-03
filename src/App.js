@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import React from "react"
+import Travel from "./Travel"
+import data from "./data"
 import './App.css';
+import { GiWorld } from "react-icons/gi";
 
-function App() {
+
+export default function App() {
+  const card = data.map(item => {
+    return (
+      <Travel
+        key={item.id}
+        {...item}
+      />
+    )
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <nav className="nav">
+        <span><GiWorld />My Travel Journal</span>
+      </nav>
+      {card}
     </div>
-  );
+  )
 }
-
-export default App;
