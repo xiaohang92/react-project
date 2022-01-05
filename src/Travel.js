@@ -3,7 +3,7 @@ import { IoLocationSharp } from "react-icons/io5";
 
 export default function Travel(props) {
     return (
-        <div clasName="section">
+        <div id="container">
             <img className="image" src={`${props.imageUrl}`} />
             <div className="box">
                 <span><IoLocationSharp />{props.location}</span>
@@ -12,7 +12,7 @@ export default function Travel(props) {
                 <h5>{props.startDate} - {props.endDate}</h5>
                 <p>{props.description}</p>
             </div>
-            <br></br>
+
         </div>
     )
 }
